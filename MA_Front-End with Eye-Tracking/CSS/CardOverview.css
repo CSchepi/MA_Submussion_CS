@@ -1,0 +1,136 @@
+:root{
+    --show-kat0: block;
+    --show-kat1: block;
+    --show-kat2: block;
+    --show-kat3: block;
+    --show-kat4: block;
+    --show-recipe: block;
+    --show-med0: block;
+    --show-med1: block;
+    --show-med2: block;
+    --printhover: none;
+}
+
+.cardwrapper{
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2vh;
+}
+#addcartfield{
+    position: relative;
+    float: left;
+    margin-right: calc(2*var(--card-scale));
+    margin-bottom: calc(2*var(--card-scale));
+    width: calc(20*var(--card-scale));
+    aspect-ratio: 1/1.5;
+    border-radius: calc(1*var(--card-scale));
+    transition: 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+#addcartfield:hover{
+    transform: scale(1.1);
+}
+.filterwrapper{
+    margin-top: 6vh;
+    width: 66%;
+    margin-left: 17%;
+    margin-right: 0;
+    background: rgba(233,233,233,0.9);
+    border: 0.141vw solid black;
+    border-radius: 1vh;
+    height: 2vw;
+    display: grid;
+    grid-template-columns: 5% 27% 16% 16% 9% 10% 4%;
+    column-gap: 2%;
+    padding: 0;
+}
+.filter{
+    text-align: center;
+    font-size: 1.1vw;
+    line-height: 1.5vw    ;
+    margin-top: 0.25vw;
+    cursor: default;
+}
+input{
+    line-height: 1vw;
+    margin-top: 0.2vw;
+    top: 0;
+    width: 80%;
+    border-radius: 2vh;
+    text-align: center;
+    border: 0.1vw solid gray;
+    font-size: 1vw;
+    transform: translateY(-0.3vh);
+}
+#CheckboxZutat, #CheckboxRezept{
+    float: left;
+    width: auto;
+    margin: 0.5vw;
+    width: 1vw;
+    cursor: pointer;
+}
+.checkboxwrapper{
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+.dropdown{
+    width: 100%;
+    background: white;
+    border-radius: 1vh;
+    cursor: pointer;
+    border: 0.1vw solid gray;
+    font-size: 1vw;
+    height: 1.4vw;
+}
+.filter:hover .optionsshowable{
+    display: inline-block;
+}
+.options{
+    border: 0.1vw solid black;
+    border-radius: 1vh;
+    cursor: pointer;
+    width: 100%;
+    display: none;
+    position: relative;
+    background: white;
+    z-index: 5;
+}
+.options p{
+    margin: 0;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    transition: 0.2s ease;
+}
+.options p:hover{
+    background: lightblue;
+}
+.ckat0{    display: var(--show-kat0);    }
+.ckat1{    display: var(--show-kat1);    }
+.ckat2{    display: var(--show-kat2);    }
+.ckat3{    display: var(--show-kat3);    }
+.ckat4{    display: var(--show-kat4);    }
+.crezept{    display: var(--show-recipe);    }
+.cmed0{    display: var(--show-med0);    }
+.cmed1{    display: var(--show-med1);    }
+.cmed2{    display: var(--show-med2);    }
+#PrintButton{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    line-height: 1.8vw;
+    font-size: 1.4vw;
+    margin-top: 0.1vw;
+    height: 1.8vw;
+    width: 2.2vw;
+    border: 0.1vw solid black;
+    border-radius: 0.3vw;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+#PrintButton:hover{
+    background: var(--printhover) !important;
+}

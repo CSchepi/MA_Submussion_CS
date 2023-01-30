@@ -1,0 +1,47 @@
+{
+    "levels":[
+        {
+            "level":0,
+            "type": "Puzzle",
+            "img":"url",
+            "infotext": "some information about the food"
+        },
+        {
+            "level":1,
+            "type": "Questions",
+            "infotext": "Information on which the questions are based on",
+            "Questions":[
+                {
+                    "Question":"Question text",
+                    "A1": "correct answer",
+                    "A2": "wrong answer",
+                    "A3": "wrong answer",
+                    "A4": "wrong answer",
+                    "img":"url"
+                },
+                {
+                    "Question":"Question text",
+                    "A1": "correct answer",
+                    "A2": "wrong answer",
+                    "A3": "wrong answer",
+                    "A4": "wrong answer",
+                    "img":"url"
+                },
+                {
+                    "Question":"Question text",
+                    "A1": "correct answer",
+                    "A2": "wrong answer",
+                    "A3": "wrong answer",
+                    "A4": "wrong answer",
+                    "img":"url"
+                }
+            ]
+        },
+        {
+            "level":2,
+            "type": "Memory",
+            "infotext": "some information about the food",
+            "images":["url1","url2","url3","url4","url5","url6","url7","url8","url9","url10"]
+        }
+    ] 
+}

@@ -1,0 +1,23 @@
+#ZutatausRezept div, #ZutatGegfunden div{
+    margin-top: 3vh;
+    margin-left: 10vw;
+}
+#ZutatausRezept, #ZutatGegfunden{
+    float: left;
+}
+input{
+    width:5vw;
+    margin: 0;
+    margin-right: 0.5vw;
+    margin-left: 1vw;
+    line-height: 1vh;
+    height: 1vh;
+}
+button{
+    line-height: 1vh;
+}
+#NextButton{
+    line-height: 3vh;
+    background: green;
+    float: left;
+}

@@ -1,0 +1,71 @@
+:root{
+  --progress: 0; /*0-100*/
+}
+#quizzwrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  left: 0;
+}
+#quizzcontent{
+  position: relative;
+  width: 50%;
+  margin-top: 15vh;
+}
+#quizzprogressbar, #quizzprogressbarborder{
+  position: absolute;
+  height: 0.7vh;
+  width: calc(var(--progress)*0.4%); /* of 40% */
+  margin-left: 30%;
+  margin-bottom: 2vh;
+  border: 0.3vh solid lime;
+  border-radius: 1vh;
+  background: lime;
+}
+#quizzprogressbar{
+  transition: 1s ease;
+}
+#quizzprogressbarborder{
+  width: 40%;
+  background: none;
+  border: 0.3vh solid black;
+}
+#quizzimg{
+  margin-top: 3vh;
+  width: 80%;
+  height: 25vh;
+  margin-left: 10%;
+  object-fit: cover;
+  border-radius: 3vh;
+  border: 0.5vh solid black;
+  box-shadow: 1vh 1vh 1vh rgba(0,0,0,0.6);
+}
+#question{
+  width: 100%;
+  background: white;
+  margin-top: 2vh;
+  height: 8vh;
+  border-radius: 4vh;
+  text-align: center;
+  font-size: 2.5vh;
+  cursor: default;
+  line-height: 8vh;
+}
+.answerfield{
+  width: 46%;
+  float: left;
+  height: 5vh;
+  margin: 1.5%;
+  background: white;
+  border: min(0.2vw, 0.4vh) solid black;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: 0.5s ease;
+  box-shadow: 0.5vh 0.5vh 0.5vh rgba(0,0,0,0.4);
+  text-align: center;
+  font-size: 1.1vw;
+  line-height: 5vh;
+}
+.answerfield:hover{
+  transform: scale(1.1);
+}

@@ -1,0 +1,29 @@
+:root{
+  --i-scale: max(10px, 1vh, 1vw)
+}
+#impressum{
+  position: fixed;
+  bottom: 0;
+  right: 0.5vw;
+  color: black;
+  background: none;
+  border: calc(0.2*var(--i-scale)) solid black;
+  font-size: var(--i-scale);
+  line-height: calc(1.2*var(--i-scale));
+  padding: calc(0.2*var(--i-scale));
+  border-radius: var(--i-scale);
+  padding-left:  calc(0.6*var(--i-scale));
+  padding-right:  calc(0.6*var(--i-scale));
+  margin-bottom: 0.5vh;
+  width: calc(0.4* var(--i-scale) );
+  overflow: hidden;
+  letter-spacing: var(--i-scale);
+  transition: 1s ease;
+  cursor: pointer;
+}
+#impressum:hover{
+  width: calc(5.9*var(--i-scale));
+  letter-spacing: calc(0.2*var(--i-scale));
+  color: white;
+  background: black;
+}

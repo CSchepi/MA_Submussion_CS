@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+    <link rel="icon" href="./img/Icons/Iconx64.png">
+    <link rel="stylesheet" href="./indexStyle.css">
+    <title>Tommi Login</title>
+
+</head>
+<body>
+
+
+<!-- Titel Welcome -->
+<h1 id="h1">Wilkommen bei Tommi</h1>
+<h3 id="h3">Deinem Lebensmittel Lernspiel</h3>
+
+<!-- Login-Field -->
+<div id="login">
+    <h3>Anmelden</h3>
+    <p>Nutzername</p><input type="text" id="loginName">
+    <p>Passwort</p><input type="password" id="loginPw">
+    <button id="LoginButton" onclick="Login()">Anmelden!</button>
+    <img src="./img/loading.gif" alt="" id="loadingcircle">
+    <a id="infotext">Das erste Anmelden dauert manchmal bis zu 30 Sekunden.</a>
+</div>
+
+<!-- Field leading to Registration Field -->
+<div id="toRegister">
+    <h3>Registrieren</h3>
+    <a onclick="ToRegister()">Hier klicken!</a>
+</div>
+<!-- Registeation Field -->
+<div id="register">
+    <h3>Neuen Benutzer erstellen</h3>
+    <div id="registerInputL">
+        <p>Nutzername</p><input type="text" id="Rname">
+        <p>Geburtstag</p><input type="date" id="Rday">
+    </div>
+    <div id="registerInputR">
+        <p>Passwort</p><input type="text" id="Rpw1">
+        <p>Passwort (wiederholen)</p><input type="text" id="Rpw2">
+        <p>Cookiesakzeptieren: </p>
+        <div style="text-align: left;"><input type="checkbox" id="Rbox" style="width:2vw">Seitenübergreifende speicherung von nicht-personenbezogenen Daten (Spielfortschritt)</div>
+    </div>
+    <button id="RegisterButton" onclick="Register()">Register!</button>
+    <button id="BackButton" onclick="RegisterBack()">&#60;&#60; Zurück</button>
+</div>
+
+<div id="LoadingAnimation">
+    <img src="./img/Logo_Animated_1.gif">
+</div>
+
+<script src="./JS/indexPage.js"></script>
+<script src="./JS/PortraitModeWarning.js"></script>
+
+</body>
+</html>

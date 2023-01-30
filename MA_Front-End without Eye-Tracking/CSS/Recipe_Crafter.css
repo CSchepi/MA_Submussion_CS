@@ -1,0 +1,223 @@
+:root{
+    --card-scale: min(0.7vh, 0.4vw) !important;
+}
+body{
+    height: 100%;
+    overflow: hidden;
+}
+.card{
+    margin-right: calc((-10)*var(--card-scale));
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.card:hover{
+    transform: scale(1.6);
+}
+.cimg{
+    aspect-ratio: 1.7;
+}
+.katwrapper{
+    position: relative;
+    margin-left: calc(3*var(--card-scale));
+    margin-top: 5vh;
+    height: calc(33*var(--card-scale));
+    width: 40%;
+    float: left;
+}
+.floatr{
+    float: right;
+    margin-right: calc(13*var(--card-scale));
+    margin-left: 0;
+}
+.floatr .card{   
+    float: right;
+}
+.crafting{
+    position: absolute;
+    width: 50%;
+    height: calc(115*var(--card-scale));
+    left: 25%;
+    background: rgba(255,255,255,0.5);
+    margin-top:  3vh;
+    border: 0.6vh solid black;
+    border-radius: 4vh;
+    display: flex;
+    justify-content: center;
+}
+.craftresult{
+    position: absolute;
+    margin-top: calc(70*var(--card-scale));
+}
+.questionmark{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(30*var(--card-scale));
+    margin-top: 0;
+    opacity: 0.3;
+}
+.craftresult .card{
+    position: absolute;
+    top: 0;
+    transform: scale(1.4);
+    margin-right: 0;
+    margin-left: 0;
+}
+.craftinput .card:hover{
+    transform: scale(1.4);
+}
+
+.craftresult .card:hover{
+    transform: scale(1.8);
+}
+.craftinput .card{
+    transform: scale(1.05);
+    margin-top:  calc(10*var(--card-scale));
+    margin-right: calc((3)*var(--card-scale));
+}
+.craftinput>div:last-child{
+    margin-right: 0;
+}
+
+.inputremover{
+    position: absolute;
+    margin-top: calc(45*var(--card-scale));;
+}
+.inputremover div{
+    width: calc(24*var(--card-scale));
+    float: left;
+}
+.rembutton{
+    text-align: center;
+    width: calc(5*var(--card-scale));
+    font-size: calc(3*var(--card-scale));
+    cursor: pointer;
+    transition: 0.2s ease;
+    padding: 0;
+}
+.rembutton:hover{
+    transform: scale(1.2);
+}
+.inputremover>div:last-child{
+    width: calc(5*var(--card-scale));
+}
+.shownext{
+    position: absolute;
+    margin-left: calc(45*var(--card-scale));
+}
+.shownext button, .showprev button{
+    font-size: calc(5*var(--card-scale));
+    transform: scaleY(1.5);
+    line-height: calc(10*var(--card-scale));
+    margin-top: calc(10*var(--card-scale));
+    cursor: pointer;
+}
+.showprev{
+    position: absolute;
+    float: right;
+    right: 0;
+    margin-right: calc(35*var(--card-scale));
+}
+hr, .Generate{
+    width: 30%;
+    position: absolute;
+    margin-top: calc(55*var(--card-scale));
+    color: black;
+    border: 0.1vh solid black;
+    left: 10%;
+}
+#hr2{
+    left: 60%;
+}
+#hrganz{
+    width: 80%;
+}
+.Generate{
+    left: auto;
+    top:calc(-3.5*var(--card-scale));
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.Generate img{
+    height: calc(7*var(--card-scale));
+    padding: calc(0.3*var(--card-scale));
+    border: calc(0.4*var(--card-scale)) solid darkgreen;
+    background: rgba(50,250,50,0.3);
+    border-radius: 20%;
+    box-shadow: calc(0.3*var(--card-scale)) calc(0.3*var(--card-scale)) calc(0.3*var(--card-scale)) rgba(0,0,0,0.5);
+    transition: 0.2s ease-in-out;
+}
+.Generate p{
+    margin-top: 0;
+}
+.Generate img:hover{
+    background: rgba(50,250,50,0.7);
+    border: calc(0.4*var(--card-scale)) solid red;
+    transform: scale(1.10);
+}
+.notavailable{
+    filter: saturate(10%);
+}
+.notavailable:hover{
+    transform: scale(1);
+    z-index: 0;
+}
+.cflip{
+    display: none;
+}
+.crezept .cflip{
+    display: block;
+}
+.cshine, .cshine2{
+    display: none;
+}
+.cpointumwelt:hover .cumweltinfo{
+    display: none;
+}
+.cpointseason:hover .cseasoninfo{
+    display: none;
+}
+.cpointwater:hover .cwaterinfo{
+    display: none;
+}
+.ctextfield, .crpoints1, .crpoints2, .crpoints1 .cpointimg, .crpoints2 .cpointimg, .csubtitle, .cseasontext, .ccategory{
+    cursor: pointer;
+}
+.ctextfield{
+    margin-top: calc((2)*var(--card-scale));
+}
+.cpoints{
+    margin-top: calc(0.3*var(--card-scale));
+}
+.singlecard .card{
+    transform: scale(3.5);
+    left: 45%;
+    top:40%;
+}
+.scannproduct{
+    position: absolute;
+    width: 3vw;
+    right: 2vw;
+    top: 1vw;
+    float: right;
+    transition: 0.2s ease;
+    cursor: pointer;
+    z-index: 2; 
+}
+.scannproduct:hover{
+    transform: scale(1.2);
+}
+.scannproduct img{
+    width: 100%;
+}
+.cname{
+    font-weight: bold;
+    transform: scale(1.3);
+}
+#tryit{
+    position: absolute;
+    width: 15vw;
+    left: 67vw;
+    top: 7vh;
+    z-index: 2;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+    <link rel="icon" href="./img/Icons/Iconx64.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./CSS/card.css">
+    <link rel="stylesheet" href="./CSS/main_look.css">
+    <link rel="stylesheet" href="./CSS/Week_Planer.css">
+    <link rel="stylesheet" href="./CSS/AllSiteContent.css">
+    <title>Wochenplan</title>
+</head>
+<body>
+  <!-- ALL SITE CONTENT -->
+  <div class="allsite">
+    <div class="homebutton" onclick="window.location.href='Navigation.html'"><img src="./img/Icons/Nav00.png" alt=""><p>Menü</p></div>
+  </div>
+
+  <!-- INDIVIDUAL CONTENT -->
+
+    <h1>Wochenplan</h1>
+    <div class="selector">
+        <!-- Filter Line -->
+        <div class="filterwrapper">
+            <div class="filter">Filter:</div>
+            <div class="filter"><input type="text" id="textfilterinput" placeholder="Test" oninput="FilterText(this.value)">🔍</div>
+            <div class="co2filter"><img src="./img/Cards/carbonpoint.png" onclick="FilterPoint('C',1)" style="background: rgb(50,150,50);"><img src="./img/Cards/carbonpoint.png" onclick="FilterPoint('C',2)" style="background: rgb(120,150,50);"><img src="./img/Cards/carbonpoint.png" onclick="FilterPoint('C',3)" style="background: rgb(200,200,50);"><img src="./img/Cards/carbonpoint.png" onclick="FilterPoint('C',4)" style="background: rgb(220,100,60);"><img src="./img/Cards/carbonpoint.png" onclick="FilterPoint('C',5)" style="background: rgb(150,50,50);"></div>
+            <div class="waterfilter"><img src="./img/Cards/waterpoint.png" onclick="FilterPoint('W',1)" style="background: rgb(50,150,50);"><img src="./img/Cards/waterpoint.png" onclick="FilterPoint('W',2)" style="background: rgb(120,150,50);"><img src="./img/Cards/waterpoint.png" onclick="FilterPoint('W',3)" style="background: rgb(200,200,50);"><img src="./img/Cards/waterpoint.png" onclick="FilterPoint('W',4)" style="background: rgb(220,100,60);"><img src="./img/Cards/waterpoint.png" onclick="FilterPoint('W',5)" style="background: rgb(150,50,50);"></div>
+        </div>
+        <!-- Scroll Buttons -->
+        <div class="shiftwrapper">
+            <div id="shiftleft" onclick="ShiftRecipes(-1)">❮</div>
+            <div id="shiftright" onclick="ShiftRecipes(1)">❯</div>
+        </div>
+        <!-- Placeholder for Recipe Cards the user owns -->
+        <div class="cardswrapper">
+            <div class="cards" id="cardstoselect">
+            </div>
+        </div>
+    </div>
+    <!-- Cylinder for footprints -->
+    <div class="cylinderwrapper">
+        <img src="./img/LVL_General/Cylinder_filling_CO2.png" alt="" class="cylinder1" id="c1value">
+        <img src="./img/LVL_General/Cylinder_CO2.png" alt="" class="cylinder1">
+        <img src="./img/LVL_General/Cylinder_filling_Water.png" alt="" class="cylinder2" id="c2value">
+        <img src="./img/LVL_General/Cylinder_Water.png" alt="" class="cylinder2">
+    </div>
+    <!-- Placeholders for 7 days to be filled in with recipe cards -->
+    <div class="plan">
+        <div class="days" id="days">
+        </div>
+        <div class="deleting">
+            <div class="deleteday" id="delday0">Tag 1: <button onclick="RemoveSelected(0)">🗑</button> </div>
+            <div class="deleteday" id="delday1">Tag 2: <button onclick="RemoveSelected(1)">🗑</button> </div>
+            <div class="deleteday" id="delday2">Tag 3: <button onclick="RemoveSelected(2)">🗑</button> </div>
+            <div class="deleteday" id="delday3">Tag 4: <button onclick="RemoveSelected(3)">🗑</button> </div>
+            <div class="deleteday" id="delday4">Tag 5: <button onclick="RemoveSelected(4)">🗑</button> </div>
+            <div class="deleteday" id="delday5">Tag 6: <button onclick="RemoveSelected(5)">🗑</button> </div>
+            <div class="deleteday" id="delday6">Tag 7: <button onclick="RemoveSelected(6)">🗑</button> </div>
+        </div> 
+        <div class="health"></div>
+    </div>
+    
+    <script src="./JS/BarcodeGenerator.js"></script>
+    <script src="./JS/card.js"></script>
+    <script src="./JS/Week_Planer.js"></script>
+    	<!-- SCRIPTS FOR ALL SITES -->
+	<script src="./JS/AllSiteContent.js"></script>
+	<script src="./JS/PortraitModeWarning.js"></script>
+    <script src="./JS/TutorialTommi.js"></script>
+</body>
+</html>

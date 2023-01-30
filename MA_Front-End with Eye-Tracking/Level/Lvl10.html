@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+  <link rel="icon" href="../img/Icons/Iconx64.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Lvlelements.css">
+  <link rel="stylesheet" href="../CSS/main_look.css">
+  <link rel="stylesheet" href="../CSS/lvlbar.css">
+  <link rel="stylesheet" href="../CSS/memory.css">
+  <link rel="stylesheet" href="../CSS/card.css">
+  <link rel="stylesheet" href="../CSS/AllSiteContent.css">
+  <title>Level 10</title>
+</head>
+<body>
+  
+  <div id="redbright"></div>
+  <div class="allsite">
+    <div class="homebutton" onclick="ExitLevel()"><img src="../img/Icons/Nav00.png" alt=""><p>Zurück</p></div>
+  </div>
+  <div class="backgroundframe">
+    <img src="../img/LVL_General/Frame.jpg" alt="">
+  </div>
+
+
+  <div class="cylinderwrapper">
+    <img src="../img/LVL_General/Cylinder_filling_CO2.png" alt="" class="cylinder1" id="c1value">
+    <img src="../img/LVL_General/Cylinder_CO2.png" alt="" class="cylinder1">
+    <img src="../img/LVL_General/Cylinder_filling_Water.png" alt="" class="cylinder2" id="c2value">
+    <img src="../img/LVL_General/Cylinder_Water.png" alt="" class="cylinder2">
+  </div>
+
+  <div class="backdropwrapper">
+    <!-- Playfield -->
+    <div class="backdrop">      
+      
+      <!-- Background -->
+      <img src="../img/LVL_General/BackgroundSpring.png" alt=""class="backdropimg" id="bd1">
+      <img src="../img/LVL_General/BackgroundSummer.png" alt=""class="backdropimg" id="bd2">
+      <img src="../img/LVL_General/BackgroundFall.png" alt=""class="backdropimg" id="bd3">
+      <img src="../img/LVL_General/BackgroundWinter.png" alt=""class="backdropimg" id="bd4">
+
+      <!-- Audi controll buttons -->
+      <button class="audiocontroll" id="audio" onclick="Audiocontroll()"><img id="audioimg" src="../img/Icons/music_1.png" alt=""></button>
+      <button class="audiocontroll" id="speach" onclick="Mute()"> <img id="voiceimg" src="../img/Icons/voice_1.png" alt=""></button>
+      
+      
+      <!-- SPielelemente (NUDELN) -->
+      <!-- Mehl -->
+      <img src="../img/LVL_General/Acker.png" alt="" class="gameelement " id="acker">
+      <img src="../img/Lvl6/Acker_Steine.png" alt="" class="gameelement " id="stein">
+      <img src="../img/Lvl6/Dünger.png" alt="" class="gameelement GEhidden" id="dünger">
+      <img src="../img/Lvl6/Dünger_Sack.png" alt="" class="gameelement" id="dünger_sack">
+      <img src="../img/Lvl6/Mäh_1klein.png" alt="" class="gameelement GEhidden" id="MäK">
+      <img src="../img/Lvl6/Pflanzen1.png" alt="" class="gameelement GEhidden" id="klein">
+      <img src="../img/Lvl6/Pflanzen2.png" alt="" class="gameelement GEhidden" id="mittel">
+      <img src="../img/Lvl6/Pflanzen3.png" alt="" class="gameelement GEhidden" id="groß">
+      <img src="../img/Lvl6/Wasser.png" alt="" class="gameelement GEhidden" id="wasser">
+      <img src="../img/Lvl6/Samen.png" alt="" class="gameelement" id="samen">
+      <img src="../img/Lvl6/Kiste.png" alt="" class="gameelement GEhidden" id="kiste">
+      <img src="../img/Lvl6/Mehl.png" alt="" class="gameelement GEhidden" id="mehl">
+      <img src="../img/LVL_General/Traktor_Klein.png" alt="" class="gameelement" id="TrK">
+      <img src="../img/LVL_General/TraktorL.png" alt="" class="gameelement GEhidden" id="TrL">
+      <img src="../img/LVL_General/TraktorR.png" alt="" class="gameelement GEhidden" id="TrR">
+      <img src="../img/LVL_General/Brunnen.png" alt="" class="gameelement" id="brunnen">
+      <img src="../img/LVL_General/Gießkanne+.png" alt="" class="gameelement" id="kanne">
+      <img src="../img/Lvl6/Mühle.png" alt="" class="gameelement " id="mühle">
+      <img src="../img/Lvl6/Mäh(L).png" alt="" class="gameelement GEhidden" id="MäL">
+      <img src="../img/Lvl6/Mäh(R).png" alt="" class="gameelement GEhidden" id="MäR">
+      <!-- EI -->
+      
+      <img src="../img/LVL_General/Fence_Hinten.png" alt="" class="gameelement GEhidden" id="zh">
+      <img src="../img/Lvl5/Chicken.png" alt="" class="gameelement GEhidden" id="chicken">
+      <img src="../img/Lvl5/Schild_Futter1.png" alt="" class="gameelement GEhidden" id="sf1">
+      <img src="../img/Lvl5/Schild_Futter5.png" alt="" class="gameelement GEhidden" id="sf5">
+      <img src="../img/Lvl5/Futter1.png" alt="" class="gameelement GEhidden" id="f1">
+      <img src="../img/Lvl5/Futter2.png" alt="" class="gameelement GEhidden" id="f5">
+      <img src="../img/Lvl5/Korb.png" alt="" class="gameelement GEhidden" id="korb">
+      <img src="../img/Lvl5/Stall_zu.png" alt="" class="gameelement GEhidden" id="stall">
+      <img src="../img/Lvl5/Stall_Rampe.png" alt="" class="gameelement GEhidden" id="rampe">
+      <img src="../img/Lvl5/Schild.png" alt="" class="gameelement GEhidden" id="schild">
+
+      <img src="../img/Lvl10/nudeln.png" alt="" class="gameelement GEhidden" id="nudeln">
+      <img src="../img/Lvl10/nudelfabrik.png" alt="" class="gameelement GEhidden" id="fabrik">
+      
+      <div id="gifwrapper"></div>
+
+      <!-- Hauptcharakte -->
+      <div id="tommiwrapper">
+        <img src="../img/LVL_General/Standing.gif" id="Tommi">
+        <div class="sprechblase" id="Sprechblasencontainer"><img class="sprechblasenbild" id="sprechblase" src="../img/LVL_General/Sprechblase.png" alt=""><p id="Sprechblasentext">Das brauche ich vielleicht später einmal.</p></div>
+      </div>
+
+      
+      <img src="../img/LVL_General/Fence_Vorne.png" alt="" class="gameelement GEhidden" id="zv">
+
+      
+      
+      <!-- Blackdrop -->
+      <div id="blackdrop"></div>
+      <!-- Navigationsmap -->
+      <svg id="Waypointselect" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2402 1801">
+        <polygon class="cls-1" onclick="MoveTo(1)" points="0,1086 443.9,1095.6 467.2,1450.1 0,1434.1"/>
+        <polygon class="cls-1" onclick="MoveTo(2)" points="1168.9,1130.2 443.9,1095.6 467.2,1450.1 1143.9,1476.4 "/>
+        <path class="cls-1" onclick="MoveTo(6)"  d="M1168.9,1130.2l384.3,28.3c0,0,72.5,28.9,47.2,127.5c-25.3,98.6-91,203.2-91,203.2L1314.1,1800H980.5l153-323.6L1168.9,1130.2z"/>
+        <path class="cls-1"  id="graph3" onclick="MoveTo(3)" d="M1509.5,1489.2c0,0,128.7-221.4,92.2-281s-59.5-50.5-59.5-50.5l-373.3-27.5l-25,346.2L1509.5,1489.2z"/>
+        <polygon class="cls-1" onclick="MoveTo(4)" points="0,1800 0,1434.1 467.2,1450.1 467.2,1800"/>
+        <polygon class="cls-1" onclick="MoveTo(5)" points="980.5,1800 1143.9,1476.4 467.2,1450.1 467.2,1800"/>
+        <polygon class="cls-1"  id="graph6old" onclick="MoveTo(6)" points="1314.1,1800 1509.5,1489.2 1143.9,1476.4 980.5,1800"/>
+        <path class="cls-1" onclick="MoveTo(18)" d="M2400,1043.2l-628.8-32.1l-54.2,159.5l-163.8-12.1c0,0,52.5,33.2,55,72.7c2.4,39.5,0,54.7-41.8,146.4 c-45.2,99.1-56.9,111.6-56.9,111.6L1308,1800h1092V1043.2z"/>
+        <polygon class="cls-1" onclick="MoveTo(9)" points="0,449.5 345.8,449.5 443.9,612.9 443.9,1095.6 0,1086"/>
+        <polygon class="cls-1" onclick="MoveTo(10)" points="592,684.1 818.9,1113.5 443.9,1095.6 443.9,612.9 397.9,536.3 547.8,584.1"/>
+        <polygon class="cls-1" onclick="MoveTo(11)" points="970.8,555.2 618.9,735.1 818.9,1113.5 1273.4,1138.6 1209.7,841.2 1057.4,595.6 "/>
+        <polygon class="cls-1" onclick="MoveTo(12)" points="1331,422.5 1376.5,1145.5 1273.4,1138.6 1209.7,841.2 1057.4,595.6 "/>
+        <polygon class="cls-1" onclick="MoveTo(14)" points="1445.8,528.3 1461.2,701.4 1730.5,699.5 1975.8,710.4 1975.8,420.6 1834.3,203.3 1551.6,189.8 1434.3,420.6"/>
+        <polygon class="cls-1" onclick="MoveTo(13)" points="1363.8,943.9 1730.5,699.5 1461.2,701.4 1445.8,528.3 1338.2,536.3"/>
+        <polygon class="cls-1" onclick="MoveTo(15)" points="1717,1170.6 1874.8,706.3 1730.5,699.5 1363.8,943.9 1376.5,1145.5"/>
+        <polygon class="cls-1" onclick="MoveTo(17)" points="2400,966.8 2192,966.8 2080.5,507.2 2268.9,428.3 2400,443.7"/>
+        <polygon class="cls-1" onclick="MoveTo(16)" points="1975.8,687.9 2124.3,687.9 2192,966.8 2400,966.8 2400,1043.2 1926.9,1018.9 1771.2,1011.1 1874.8,706.3 1975.8,710.4"/>
+        <polygon class="cls-1" onclick="MoveTo(20)" points="805.6,362.9 547.8,584.1 618.9,735.1 970.8,555.2 1068.9,449.5"/>
+        <polygon class="cls-1" onclick="MoveTo(21)" points="249.7,155.2 428.5,18.7 676.6,49.5 805.6,362.9 547.8,584.1 397.9,536.3 345.8,449.5 222,355.2"/>
+      </svg>
+
+      <!-- Punkteanzeige und Puzzelteil für Bonusspiel -->
+      
+    <div class="puzzlepiecewrapper">
+      <img id="puzzlepiece" onclick="OpenPuzzle()" src="../img/LVL_General/Puzzlepiece.png" alt="">
+    </div>
+    </div>
+  </div>
+  <div id="lvlbarwrapper">
+    <div class="lvlbar">
+      <div class="lbbarcontainer"><div class="lbbar" id="lbbar" style="width: 0%;"><div class="lbshine"></div></div></div>
+      <img src="../img/LVL_General/StarEmpty.png" alt="" class="lbstar lbstar1" id="lbstar1empty">
+      <img src="../img/LVL_General/Star.png" alt="" class="lbstar lbstar1" id="lbstar1full">
+      <img src="../img/LVL_General/Effect - Star_Sparkel.gif" alt="" class="lbstar lbstar1 lbstarsparkel" id="lbstarspark1">
+      <img src="../img/LVL_General/StarEmpty.png" alt="" class="lbstar lbstar2" id="lbstar2empty">
+      <img src="../img/LVL_General/Star.png" alt="" class="lbstar lbstar2" id="lbstar2full">
+      <img src="../img/LVL_General/Effect - Star_Sparkel.gif" alt="" class="lbstar lbstar2 lbstarsparkel" id="lbstarspark2">
+      <img src="../img/LVL_General/StarEmpty.png" alt="" class="lbstar lbstar3" id="lbstar3empty">
+      <img src="../img/LVL_General/Star.png" alt="" class="lbstar lbstar3" id="lbstar3full">
+      <img src="../img/LVL_General/Effect - Star_Sparkel.gif" alt="" class="lbstar lbstar3 lbstarsparkel" id="lbstarspark3">
+    </div>
+  </div> 
+  <div class="Puzzlecontainer">
+    <div class="allsite">
+      <div class="homebutton" onclick="ClosePuzzle()"><img src="../img/Icons/Nav0.png" alt=""><p>Zurück</p></div>
+    </div>
+    <!-- adjust to correct puzzle -->
+    <div class="memorywrapper">
+      <div id="memorygrid">
+          <div class="memorycard" id="card0" onclick="FlipMemoryCard(0)"></div>
+          <div class="memorycard" id="card1" onclick="FlipMemoryCard(1)"></div>
+          <div class="memorycard" id="card2" onclick="FlipMemoryCard(2)"></div>
+          <div class="memorycard" id="card3" onclick="FlipMemoryCard(3)"></div>
+          <div class="memorycard" id="card4" onclick="FlipMemoryCard(4)"></div>
+          <div class="memorycard" id="card5" onclick="FlipMemoryCard(5)"></div>
+          <div class="memorycard" id="card6" onclick="FlipMemoryCard(6)"></div>
+          <div class="memorycard" id="card7" onclick="FlipMemoryCard(7)"></div>
+          <div class="memorycard" id="card8" onclick="FlipMemoryCard(8)"></div>
+          <div class="memorycard" id="card9" onclick="FlipMemoryCard(9)"></div>
+          <div class="memorycard" id="card10" onclick="FlipMemoryCard(10)"></div>
+          <div class="memorycard" id="card11" onclick="FlipMemoryCard(11)"></div>
+          <div class="memorycard" id="card12" onclick="FlipMemoryCard(12)"></div>
+          <div class="memorycard" id="card13" onclick="FlipMemoryCard(13)"></div>
+          <div class="memorycard" id="card14" onclick="FlipMemoryCard(14)"></div>
+          <div class="memorycard" id="card15" onclick="FlipMemoryCard(15)"></div>
+          <div class="memorycard" id="card16" onclick="FlipMemoryCard(16)"></div>
+          <div class="memorycard" id="card17" onclick="FlipMemoryCard(17)"></div>
+          <div class="memorycard" id="card18" onclick="FlipMemoryCard(18)"></div>
+          <div class="memorycard" id="card19" onclick="FlipMemoryCard(19)"></div>
+          <div class="memorycard" id="card20" onclick="FlipMemoryCard(20)"></div>
+          <div class="memorycard" id="card21" onclick="FlipMemoryCard(21)"></div>
+          <div class="memorycard" id="card22" onclick="FlipMemoryCard(22)"></div>
+          <div class="memorycard" id="card23" onclick="FlipMemoryCard(23)"></div>
+      </div>
+    </div>
+</div>
+
+
+<button onclick='switchCamera()' style=' position: absolute; left:5vw'>C</button><button onclick='switchDot()' style=' position: absolute; left:8vw'>D</button>
+<div class="textfield"><p id="textfieldtext"></p></div>
+   
+<div class="blackonend" id="EndScreen">
+  <h1 id="WinText">Level abgeschlossen!</h1>
+  <div class="revealcardcontainer">
+     <!-- Change to level related card id -->
+    <div class="card card0" id="C33"></div> 
+  </div>
+  <button id="ButtonWeiter1" onclick="RevealScore()">Weiter ></button>
+  <button id="ButtonWeiter2" onclick="window.location.href='../level_overview.html'">Weiter ></button>
+</div>
+
+<div class="singlecard" id="singlecardwrapper">
+  <div class="closefull" onclick="CloseFullscrean()"><p>×</p></div>
+</div>
+
+<div id='impressum' onclick='window.open("../impressum.html", "_blank")'>impressum</div>
+<!-- CHANGE -->
+<script src="./Lvl10.js"></script>
+<script src="./LvlGeneral_Farm.js"></script>
+<script src="webgazer.js" type="text/javascript" ></script>
+<script src="./AttentoinTracking.js"></script>
+<!-- Adjust to correct puzzle -->
+<script src="../JS/memory.js"></script></div>
+  	<!-- SCRIPTS FOR ALL SITES -->
+  <script src="../JS/BarcodeGenerator.js"></script>
+  <script src="./cardreveal.js"></script>
+	<script src="../JS/PortraitModeWarning.js"></script>
+  <script src="../JS/lvlbar.js"></script>
+  <script src="../JS/Lvl_impressum.js"></script>
+</body>
+</html>

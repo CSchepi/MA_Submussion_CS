@@ -1,0 +1,57 @@
+body{
+  background: url(../img/Background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.pagetitle{
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  font-size: 4vh;
+}
+.allsite{
+  position: absolute;
+  height: 5vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  z-index: 2;
+  top:0;
+}
+.homebutton{
+  position: relative;
+  width: 4vw;
+  aspect-ratio: 1;
+  float: left;
+  margin-top: 0;
+  cursor: pointer;
+}
+.homebutton img{
+  width: 2.5vw;
+  padding: 0.5vw;
+  border: 0.15vw solid black;
+  border-radius: 20%;
+  box-shadow: 0.2vw 0.2vw 0.2vw rgba(0,0,0,0.5);
+  transition: 0.2s ease-in-out;
+}
+.homebutton:hover img{
+  background: rgba(250,250,250,0.5);
+  transform: scale(1.10);
+}
+.homebutton:hover p{
+  color: darkslateblue;
+  font-size: 1.3vw;
+}
+.homebutton p{
+  position: relative;
+  width: 100%;
+  font-size: 1vw;
+  font-weight: bolder;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  margin-top: 0.4vw;
+}
+h1{
+  text-align: center;
+}

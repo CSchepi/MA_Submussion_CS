@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+    <link rel="icon" href="./img/Icons/Iconx64.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./CSS/card.css">
+    <link rel="stylesheet" href="./CSS/main_look.css">
+    <link rel="stylesheet" href="./CSS/Recipe_Crafter.css">
+    <link rel="stylesheet" href="./CSS/AllSiteContent.css">
+    <title>Kombinieren</title>
+</head>
+<body>
+  <!-- ALL SITE CONTENT -->
+  <div class="allsite">
+    <div class="homebutton" onclick="window.location.href='Navigation.html'"><img src="./img/Icons/Nav00.png" alt=""><p>Menü</p></div>
+  </div>
+
+  <!-- INDIVIDUAL CONTENT -->
+    <h1 class="pagetitle">Rezepte Werkbank</h1>
+    <div class="singlecard" id="singlecardwrapper">
+        <div class="closefull" onclick="CloseFullscreanCrafter()"><p>×</p></div>
+    </div>
+    <!-- Image to guide attention to product scanner -->
+    <img src="./img/Scanner/Try_it.png" id="tryit" alt="">
+    <!-- Kathegoris on side of screen in which owned cards are filled in  -->
+    <div class="kat0 katwrapper" id="KatWrapp0"></div>
+    <div class="kat1 katwrapper floatr" id="KatWrapp1"></div>
+    <div class="kat2 katwrapper" id="KatWrapp2"></div>
+    <div class="kat3 katwrapper floatr" id="KatWrapp3"></div>
+    <div class="kat4 katwrapper" id="KatWrapp4"> </div>
+    <!-- Crafting Field splitted in TOP (Input) and Bottom (Output) -->
+    <div class="crafting">
+        <div class="scannproduct"><img src="./img/Scanner/StartScann.png" alt="" onclick="window.location.href='./ScannCodeCrafting.html'"></div>
+        <div class="craftinput" id="craftinput"></div>
+        <div class="inputremover" id="inputremover"></div>
+        <hr id="hrganz">
+        <hr id="hr1">
+        <div class="Generate" id="GenerateButton" onclick="ShowResult()"><img src="./img/Icons/Nav1.png" alt=""></div>
+        <hr id="hr2">
+        <div class="craftresult">
+            <p class="questionmark">?</p>
+        </div>
+    </div>
+
+    
+    <script src="./JS/BarcodeGenerator.js"></script>
+    <script src="./JS/card.js"></script>
+    <script src="./JS/crafting.js"></script>
+    	<!-- SCRIPTS FOR ALL SITES -->
+	<script src="./JS/AllSiteContent.js"></script>
+	<script src="./JS/PortraitModeWarning.js"></script>
+  <script src="./JS/TutorialTommi.js"></script>
+</body>
+</html>

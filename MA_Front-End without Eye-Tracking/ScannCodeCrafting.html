@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+    <link rel="icon" href="./img/Icons/Iconx64.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main_look.css">
+    <link rel="stylesheet" href="./CSS/AddNewCard.css">
+    <link rel="stylesheet" href="./CSS/AllSiteContent.css">
+    <title>Code Scannen</title>
+</head>
+<body>
+    <!-- Textfield to manually input EAN Code of product -->
+    <div class="manualinput">
+        <h1>Barcodenummer eingeben</h1>
+        <input type="text" onchange="eanfound(this.value)">
+    </div>
+    <div class="allsite">
+        <div class="homebutton" onclick="window.location.href='Recipe_Crafter.html'"><img src="./img/Icons/Nav0.png" alt=""><p>Zurück</p></div>
+      </div>
+    <!-- Conde Scann Placeholder for BarcodeScanner.js -->
+    <h1>Barcode Scannen</h1>    
+    <div id="qr-reader" style="width: 1000px"></div>
+
+    <!-- Overlay displaying information about the scanned product -->
+    <div id="ScannOverview">
+        <div class="closefull" onclick="CloseScannInfos()"><p>×</p></div>
+        <h3 id="h31">Product: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Test </h3>
+        <h3 id="h32">Kathegorie: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Test</h3>
+        <h3>Nutri-Score: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  <img id="h33" src="./img/nutriscore/A.JPG"></h3>
+        <h3>Wasser: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  <div id="h34" style="width: 25vh;"><img src="./img/Cards/H2OPoints.png"></div> </h3>
+        <h3>Uwelt: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <div id="h35" style="width: 25vh;"><img src="./img/Cards/CO2Points.png"></div> </h3>
+        <button id="correctScann" onclick="AddScannToCrafting()">Verwenden ></button>
+    </div>
+    <script src="./JS/BarcodeScanner.js"></script>
+    <script src="./JS/ScanBarcodeCrafting.js"></script>
+    <script src="./JS/TutorialTommi.js"></script>
+    <!-- SCRIPTS FOR ALL SITES -->
+<!-- <script src="./JS/AllSiteContent.js"></script>
+<script src="./JS/PortraitModeWarning.js"></script> -->
+</body>
+</html>

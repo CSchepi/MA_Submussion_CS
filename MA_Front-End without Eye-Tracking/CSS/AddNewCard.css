@@ -1,0 +1,137 @@
+
+h1{
+  position: absolute;
+  top: 2vh;
+  width: 100%;
+  left: 0;
+}
+#qr-reader__status_span{
+  display: none;
+}
+#linktogit{
+  display: none;
+}
+/* #qr-reader div{
+  border: none !important;
+} */
+#qr-reader{
+  margin-left: calc(0.5*(100vw - 1000px));
+  border: 3px solid black !important;
+  background-color: white;
+  margin-top: 10vh;
+  border-radius: 10vh;
+  overflow: hidden;
+}
+.newcardwrapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#carditself{
+  transform: scale(1.5);
+}
+.gotocardview{
+  position: absolute;
+  left: 0;
+}
+.manualinput{
+  position: absolute;
+  width: 100%;
+  top: 30vh;
+  left: 0;
+  text-align: center;
+}
+.manualinput input{
+  position: relative;
+  width: 15vw;
+  line-height: 3vh;
+  font-size: 2.5vh;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 1vh;
+  top: 10vh;
+}
+#ScannOverview{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  color: white;
+}
+#ScannOverview h3{
+  display:flex;
+  margin-top: 10vh;
+  font-size: 3vh;
+  margin-left: 15vw;
+  align-items: center;
+}
+h3 img{
+  height:5vh;
+}
+#h33{
+  height: 10vh;
+  border-radius: 2vh;
+}
+#h34, #h35{
+  overflow: hidden;
+}
+#h34 img{
+}
+.closefull{
+  position: absolute;
+  color: black;
+  background: white;
+  width: 5vh;
+  aspect-ratio: 1;
+  text-align: center;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  margin: 2vh;
+  cursor: pointer;
+}
+.closefull p{
+  font-size: 4vh;
+  line-height: 5vh;
+  margin: 0;
+}
+#correctScann{
+  position: fixed;
+  bottom: 10vh;
+  right: 6vw;
+  font-size: 2vh;
+  padding: 1vh;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+#correctScann:hover{
+  transform: scale(1.2);
+  background-color: rgb(220,255,220);
+  border-radius: 1vh;
+}
+.gotocardview{
+  position: fixed;
+  top: 92vh;
+  width: 10vw;
+  margin-left: 85vw;
+  height: 3vh;
+  border-radius: 1vh;
+  border: darkgreen;
+  transition: 0.7s ease;
+  cursor: pointer;
+}
+.gotocardview:hover{
+  border-radius: 0;
+  background-color: lightgreen;
+}

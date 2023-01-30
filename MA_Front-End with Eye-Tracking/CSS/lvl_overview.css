@@ -1,0 +1,73 @@
+ body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ 
+ .backdropwrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .backdrop{
+    position: relative;
+    height: 90vh;
+    margin: 0;
+    margin-top: 5vh;
+    width: 120vh;
+    overflow: hidden;
+  }
+  .backdropimg{
+    position: absolute;
+    height: 100%;
+  }
+  #blackdrop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top:0;
+  }
+  .levelicon{
+    position: relative;
+    left: 0;
+    text-align: center;
+    color: rgb(240,255,240);
+    width: 12vh;
+    cursor: pointer;
+  }
+  .levelicon img{
+    left: 0;
+    width: 100%;
+    position: absolute;
+  }
+  .lvlnumbertext{
+    font-size: 3.5vh;
+    padding-top:1.2vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0.2vw 0.2vw 0.1vw rgba(0,0,0,0.2);
+  }
+  .lvlselect{display: none;}
+  .unsolved{    display: block;  }
+  .solved{    display: none;  }
+  .star1{    display: none;  }
+  .star2{    display: none;  }
+  .star3{    display: none;  }
+
+  .playbutton{
+    position: absolute;
+    bottom: 0;
+    right: 0vh;
+    width: 10vh;
+    padding: 5vh;
+    cursor: pointer;
+    transition: 0.7s ease;
+  }
+  .playbutton:hover{
+    transform: scale(1.2);
+  }
+  .playbutton img{
+    position: relative;
+    width: 100%;
+  }

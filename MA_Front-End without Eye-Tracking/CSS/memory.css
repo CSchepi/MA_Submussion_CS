@@ -1,0 +1,31 @@
+:root{
+    --memory-scale: min(20vh, 13vw)
+}
+#memorygrid{
+    display: grid;
+    grid-template-columns: var(--memory-scale) var(--memory-scale) var(--memory-scale) var(--memory-scale) var(--memory-scale) var(--memory-scale);
+    grid-template-rows: var(--memory-scale) var(--memory-scale) var(--memory-scale) var(--memory-scale);
+    column-gap: calc(0.1 * var(--memory-scale));
+    row-gap: calc(0.1 * var(--memory-scale));
+}
+.memorycard{
+    background-image: url("../img/LVL_General/MemoryBack.png");
+    width: 100%;
+    background-size: cover;
+    border-radius: 10%;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border: 1px solid rgba(0,0,0,0);
+    box-shadow: calc(0.015 * var(--memory-scale)) calc(0.015 * var(--memory-scale)) calc(0.015 * var(--memory-scale)) rgba(0,0,0,0.5);
+}
+.memorycard:hover{
+    transform: scale(1.05);
+    border: 1px solid rgba(0,0,0,1);
+}
+.memorywrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(5 * var(--memory-scale));
+}

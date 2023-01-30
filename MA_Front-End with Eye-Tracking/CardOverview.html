@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+    <link rel="icon" href="./img/Icons/Iconx64.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/card.css">
+    <link rel="stylesheet" href="./CSS/CardOverview.css">
+    <link rel="stylesheet" href="./CSS/main_look.css">
+    <link rel="stylesheet" href="./CSS/AllSiteContent.css">
+    <title>Kartenübersicht</title>
+</head>
+<body>
+  <!-- ALL SITE CONTENT -->
+  <div class="allsite">
+    <div class="homebutton" onclick="window.location.href='Navigation.html'"><img src="./img/Icons/Nav00.png" alt=""><p>Menü</p></div>
+  </div>
+
+  <!-- INDIVIDUAL CONTENT -->
+    <h1 class="pagetitle">Sammelkarten</h1>
+    <div class="singlecard" id="singlecardwrapper">
+        <div class="closefull" onclick="CloseFullscrean()"><p>×</p></div>
+    </div>
+
+    <!-- Filter line above card galery -->
+    <div class="filterwrapper">
+        <div class="filter">Filter:</div>
+        <div class="filter"><input id="FilterStringInput" type="text" placeholder="Textsuche" oninput="FilterString(this.value)">🔍</div>
+        <div class="filter"><div class="dropdown" id="KatDropdown">Kathegorie ▼</div><div class="options optionsshowable" id="KatOptions"><p onclick="FilterKat(5)">All</p><p onclick="FilterKat(2)">🍓 Obst 🍓</p><p onclick="FilterKat(3)">🥦 Gemüse 🥦</p><p onclick="FilterKat(0)">🥩 Fleisch/Fisch 🥩</p><p onclick="FilterKat(1)">🧀 Tierisch 🧀</p><p onclick="FilterKat(4)">🍴 Sonstiges 🍴</p></div></div>
+        <div class="filter"><div class="dropdown" id="MedDropdown">Medallie ▼</div><div class="options optionsshowable" id="MedOptions"><p onclick="FilterMed(5)">All</p><p onclick="FilterMed(0)">🥇 Gold 🥇</p><p onclick="FilterMed(1)">🥈 Silber 🥈</p><p onclick="FilterMed(2)">🥉 Bronze 🥉</p></div></div>
+        <div class="filter"><div class="checkboxwrapper"><input type="checkbox" checked="true" name="" id="CheckboxZutat" onchange="ShowZutaten(this.checked)">Zutaten</div></div>
+        <div class="filter"><div class="checkboxwrapper"><input type="checkbox" checked="true" name="" id="CheckboxRezept" onchange="ShowRezepte(this.checked)">Rezepte</div></div>
+        <button id="PrintButton" onclick="TryPrintElem('cardwrapper')">🖶</button>
+      </div>
+
+    <!-- Galery in which cards that match filter are shown + Add Card Placeholder -->
+    <div class="cardwrapper" id="cardwrapper">
+        <img src="./img/Cards/AddCard.png" id="addcartfield" onclick="window.location.href='AddCardNav.html'" alt="">
+    </div>
+
+
+    <script src="./JS/card.js"></script>
+    <script src="./JS/CardFilter.js"></script>
+    <script src="./JS/Print.js"></script>
+    <script src="./JS/BarcodeGenerator.js"></script>
+    	<!-- SCRIPTS FOR ALL SITES -->
+	<script src="./JS/AllSiteContent.js"></script>
+	<script src="./JS/PortraitModeWarning.js"></script>
+  <script src="./JS/TutorialTommi.js"></script>
+</body>
+</html>

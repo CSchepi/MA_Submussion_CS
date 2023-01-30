@@ -1,0 +1,76 @@
+:root{
+    --lvlbar-scale: 1.5vh;
+}
+#lvlbarwrapper{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 9vh;
+}
+
+.lvlbar{
+    position: absolute;
+    width: calc(30*var(--lvlbar-scale));
+    height: calc(4*var(--lvlbar-scale));
+    border-radius: calc(0.4*var(--lvlbar-scale));
+
+    padding: 0;
+}
+.lbbarcontainer{
+    position: relative;
+    width: 90%;
+    margin:0;
+    margin-left: 5%;
+    height: var(--lvlbar-scale);
+    top: calc(1.3*var(--lvlbar-scale));
+    background: rgba(255,255,255,0.5);
+    border-radius: var(--lvlbar-scale);
+    overflow: hidden;
+    border: calc(0.3*var(--lvlbar-scale)) solid black;
+}
+.lbbar{
+    height: 100%;
+    background: gold;
+    transition: 3s ease;
+    overflow: hidden;
+}
+@keyframes shinebar{
+    0%{left: -10%; opacity: 100;}
+    90%{left: 110%; opacity: 100;}
+    91%{left: 110%; opacity: 0;}
+    99%{left: -10%; opacity: 0;}
+    100%{left: -10%; opacity: 100;}
+}
+.lbshine{
+    position: relative;
+    width: 5%;
+    height: 200%;
+    top:-50%;
+    left: 10%;
+    transform: rotate(20deg);
+    background-color: rgba(255,240,200,0.5);
+    box-shadow: 0 0 5px 5px rgba(255,240,200,0.5);
+    animation-name: shinebar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.lbstar{
+    position: absolute;
+    top:0;
+    height: calc(4*var(--lvlbar-scale));
+}
+.lbstar1{left: 33%;}
+.lbstar2{left: 56%;}
+.lbstar3{left: 73%;}
+#lbstar1full, #lbstar2full, #lbstar3full{
+    display: none;
+    transition: 0.5s ease;
+}
+.lbstarsparkel{
+    mix-blend-mode: lighten;
+    transform: scale(2);
+    margin-left: calc(-1*var(--lvlbar-scale));
+    display: none;
+}

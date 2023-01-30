@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Food, Serious Game, Education, Collectables, Cardgame, Simulation, Farming, Eating, Environment, LMU">
+    <link rel="icon" href="./img/Icons/Iconx64.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main_look.css">
+    <link rel="stylesheet" href="./CSS/AddNewCard.css">
+    <link rel="stylesheet" href="./CSS/card.css">
+    <link rel="stylesheet" href="./CSS/AllSiteContent.css">
+    <title>Code Scannen</title>
+</head>
+<body>
+    <div class="allsite">
+        <div class="homebutton" onclick="window.location.href='AddCardNav.html'"><img src="./img/Icons/Nav0.png" alt=""><p>Zurück</p></div>
+      </div>
+    <!-- Conde Scann Placeholder for BarcodeScanner.js -->
+    <h1>Barcode Scannen</h1>    
+    <div id="qr-reader" style="width: 1000px"></div>
+    <div class="newcardwrapper">
+        <div id="carditself"></div>
+        <button class="gotocardview ➤" onclick="window.location.href='./CardOverview.html'">Weiter ></button>
+    </div>
+    <script src="./JS/BarcodeScanner.js"></script>
+    <script src="./JS/ScanBarcode.js"></script>
+    <script src="./JS/BarcodeGenerator.js"></script>
+    <script src="./JS/card.js"></script>
+    <script src="./JS/TutorialTommi.js"></script>
+    <!-- SCRIPTS FOR ALL SITES -->
+<!-- <script src="./JS/AllSiteContent.js"></script>
+<script src="./JS/PortraitModeWarning.js"></script> -->
+</body>
+</html>

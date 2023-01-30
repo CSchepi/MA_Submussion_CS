@@ -1,0 +1,295 @@
+:root{
+  --tommi-left:100;
+  --tommi-top: 39;
+  --cylinder-co2:0; /*in percent*/
+  --cylinder-water:0; /*in percent*/
+  --scale:1;
+  --showcamera: none;
+  --showdot: none;
+}
+body{
+  overflow: hidden;
+}
+
+
+.backdropwrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transform: scale(var(--scale));
+}
+.backdrop{
+  position: relative;
+  height: 90vh;
+  margin: 0;
+  margin-top: 5vh;
+  width: 120vh;
+  overflow: hidden;
+}
+.backdropimg{
+  position: absolute;
+  top:0;
+  height: 100%;
+  opacity: 0;
+  transition: 5s ease;
+  display: block;
+}
+.backgroundframe, .cylinderwrapper{
+  display: flex;
+  justify-content: center;
+  box-shadow: 5vh 5vh 1vh black;
+}
+.backgroundframe img{
+  position: absolute;
+  height: 96vh;
+  margin: 0;
+  margin-top: 2vh;
+  width: 126vh;
+  transform: scale(var(--scale));
+}
+#blackdrop{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  top:0;
+  opacity: 0;
+  transition: 3s ease;
+  
+}
+#Tommi, .sprechblase{
+  position: absolute;
+  width: calc((var(--tommi-top)/4)*1.2vh);
+  top: calc(var(--tommi-top) *0.9vh); 
+  left:calc(var(--tommi-left) *1.2vh); 
+  opacity:  1;
+  transition: 2s linear;
+  display: block;
+}
+#Waypointselect{
+  position: absolute;
+  display: block;
+  box-shadow: inset 1vh 1vh 1.5vh rgba(0,0,0,0.3);
+  height: 100%;
+  top:0;
+}
+.cls-1{
+  fill: rgba(255,255,255,0.1);
+  stroke: black;
+  stroke-width: 5px;
+  opacity: 0;
+}
+.cylinder1{
+  position: absolute;
+  height: 60vh;
+  margin-top: 20vh;
+  transform: translateX(calc(-73vh * var(--scale)));
+}
+.cylinder2{
+  position: absolute;
+  height: 60vh;
+  margin-top: 20vh;
+  transform: translateX(calc(73vh * var(--scale)));
+}
+#c1value, #c2value{
+  transition: 2.5s ease;
+}
+#c1value{
+  clip: rect(calc((100 - var(--cylinder-co2))/100*60vh),40vh,60vh,0);
+}
+#c2value{
+  clip: rect(calc((100 - var(--cylinder-water))/100*60vh),40vh,60vh,0);
+}
+.textfield{
+  background: white;
+  position: absolute;
+  text-align: left;
+  width: 60vh;
+  height: 5vh;
+  bottom: -10vh;
+  margin-left: calc(50vw - 32vh);
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  line-height: 2.5vh;
+  border-radius: 1vh;
+  font-size: 1.7vh;
+  border: 0.5vh solid black;
+  box-shadow: 0.3vh -0.3vh 0.5vh rgba(0,0,0,0.5);
+  transition: 0.5s ease;
+}
+#textfieldtext{
+  padding: 0;
+  margin: 0;
+}
+.audiocontroll{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1vh;
+  height: 2.5vh;
+  width: 4vh;
+  padding: 0;
+  text-align: center;
+  background: 0;
+  border: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.5;
+}
+.audiocontroll:hover{
+  opacity: 1;
+}
+.audiocontroll img{
+  width: 100%;
+  cursor: pointer;
+}
+#speach{
+margin-left: 6vh;
+}
+.gameelement{
+  position: absolute;
+  width: 120vh;
+}
+.GEhidden{
+  display: none;
+}
+.sprechblase{
+  opacity: 0;
+  transition: all 2s linear, opacity 0.5s ease;
+}
+.sprechblasenbild, .sprechblase p{
+  position: absolute;
+  width: 27vh;
+  height: 9vh;
+  top:-7.5vh;
+  left: -8vh;
+}
+.sprechblase p{
+  margin-left: 2vh;
+  width: 22vh;
+  font-size: 2vh;
+  text-align: center;
+}
+.puzzlepiecewrapper{
+  position: absolute;
+  width: 20vh;
+  left: 50vh;
+  top: 40vh; 
+  display: none;
+  /* left: 103vh;
+  top: -3vh; */
+  transition: 1s ease;
+}
+#puzzlepiece{
+  width: 100%;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+#puzzlepiece:hover{
+  transform: scale(1.2) translateX(-3vh) translateY(3vh);
+}
+.Puzzlecontainer{
+  position: absolute;
+  display: none;
+  top:0;
+  background: url(../img/Background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.blackonend{
+  position: absolute;
+  display: none;
+  opacity: 0;
+  transition: 1s ease;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.blackonend h1{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 9;
+  color: white;
+  margin-top: 10vh;
+}
+.blackonend button{
+  z-index: 10;
+  display: none;
+}
+.lvlbar{
+  z-index: 10;
+}
+.card{
+  z-index: 10;
+  margin-right:5vw !important;
+}
+.revealcardcontainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;
+}
+.card{
+    transform: rotateY(-630deg) scale(0.6);
+}
+.gif{
+  width: 20%;
+}
+ #webgazerVideoContainer{ 
+  display: var(--showcamera) !important;
+}
+ #webgazerGazeDot{ 
+  display: var(--showdot) !important;
+}
+#ButtonWeiter1, #ButtonWeiter2{
+  position: fixed;
+  top: 92vh;
+  width: 10vw;
+  margin-left: 85vw;
+  height: 3vh;
+  border-radius: 1vh;
+  border: darkgreen;
+  transition: 0.7s ease;
+  cursor: pointer;
+}
+#ButtonWeiter1:hover, #ButtonWeiter2:hover{
+  
+  border-radius: 0;
+  background-color: lightgreen;
+}
+
+#greenbright{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: lightgreen;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+#redbright{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: lightcoral;
+  opacity: 0;
+  transition: 0.5s ease;
+}

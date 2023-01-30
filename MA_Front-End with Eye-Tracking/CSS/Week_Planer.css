@@ -1,0 +1,185 @@
+:root{
+    --card-scale: min(1vh,0.5vw);
+    --cylinder-co2:0; /*in percent*/
+    --cylinder-water:0; /*in percent*/
+}
+.cards{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 3vh;
+}
+.card{
+    margin-right: calc((-10)*var(--card-scale));
+    cursor: pointer;
+}
+.card .cname, .card .ccategory,.card .crsubtitle, .card .cringredients, .card .cpoints .cpointimg{
+    cursor: pointer !important;
+}
+.filterwrapper{
+    margin-top: 6vh;
+    width: 60%;
+    margin-left: 20%;
+    background: rgba(233,233,233,0.9);
+    border: 0.141vw solid black;
+    border-radius: 1vh;
+    height: 2vw;
+    display: grid;
+    grid-template-columns: 8% 28% 17% 17% ;
+    column-gap: 8%;
+    padding: 0;
+}
+.filter{
+    text-align: center;
+    font-size: 1.1vw;
+    line-height: 1.5vw    ;
+    margin-top: 0.25vw;
+    cursor: default;
+}
+input{
+    line-height: 1vw;
+    margin-top: 0.2vw;
+    top: 0;
+    width: 80%;
+    border-radius: 2vh;
+    text-align: center;
+    border: 0.1vw solid gray;
+    font-size: 1vw;
+    transform: translateY(-0.3vh);
+}
+.filter:hover .options{
+    display: inline-block;
+}
+.co2filter img, .waterfilter img{
+    width: 16%;
+    margin-top: 0.2vw;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.co2filter:hover img, .waterfilter:hover img{
+    opacity: 1 !important;
+}
+.co2filter img:hover ~ *, .waterfilter img:hover ~ * {
+    opacity: 0.2 !important;
+}
+
+.addcartfield{
+    width: calc(20*var(--card-scale));
+    aspect-ratio: 1/1.5;
+    border-radius: calc(1*var(--card-scale));
+    transition: 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    margin: calc(1*var(--card-scale)) ;
+    margin-bottom: calc(2*var(--card-scale)) ;
+    float: left;
+    box-sizing: border-box;
+}
+.shiftwrapper, .cardswrapper{
+    display: flex;
+    justify-content: center;    
+}
+.cards{
+    transform: translateX(-12vw);
+}
+#shiftleft, #shiftright{
+    top: calc(11vh + 18*var(--card-scale));
+    cursor: pointer;
+    position: absolute;
+    background: rgba(233,233,233,0.9);
+    width: calc(4*var(--card-scale));
+    height: 10vh;
+    font-size: calc(4*var(--card-scale));
+    line-height: 10vh;
+    text-align: center;
+    border: 0.3vh solid gray;
+    border-radius: 1vh;
+    display: none;
+    transition: 0.2s ease;
+}
+#shiftleft:hover, #shiftright:hover{
+    background: rgba(255,255,255,1);
+}
+#shiftright{
+    transform: translateX(calc((-3vw) + 72*var(--card-scale)));
+}
+#shiftleft{
+    transform: translateX(calc((-3vw) - 58*var(--card-scale)));
+}
+.plan{
+    display: flex;
+    justify-content: center;
+}
+.days{
+    position: absolute;
+    bottom: 8vh;
+}
+.dayselector{
+    margin-right: calc((1)*var(--card-scale));;
+}
+.deleting{
+    position: absolute;
+    bottom: 3vh;
+}
+.deleteday{
+    position: absolute;
+    width:  calc(19*var(--card-scale)) ;
+    bottom: 2vh;
+}
+#delday0{transform: translateX( calc(-71*var(--card-scale)));}
+#delday1{transform: translateX( calc(-49*var(--card-scale)));}
+#delday2{transform: translateX( calc(-27*var(--card-scale)));}
+#delday3{transform: translateX( calc(-5*var(--card-scale)));}
+#delday4{transform: translateX( calc(17*var(--card-scale)));}
+#delday5{transform: translateX( calc(39*var(--card-scale)));}
+#delday6{transform: translateX( calc(61.5*var(--card-scale)));}
+.deleteday button{
+    cursor: pointer;
+    font-size: calc(2*var(--card-scale));
+}
+.carbonscale, .waterscale{
+    position: absolute;
+    width: 13vw;
+    height: calc(55*var(--card-scale));
+    bottom: 20vh;
+}
+.carbonscale{
+    left: 0;
+}
+.waterscale{
+    right: 0;
+}
+.carbonscale img, .waterscale img{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.cylinderwrapper{
+    display: flex;
+    justify-content: center;
+    box-shadow: 5vh 5vh 1vh black;
+  }
+.cylinder1{
+    position: absolute;
+    height: calc(55*var(--card-scale));
+    margin-top: 15vh;
+    transform: translateX(-43vw);
+    transition: 1.5s ease;
+  }
+  .cylinder2{
+    position: absolute;
+    height: calc(55*var(--card-scale));
+    margin-top: 15vh;
+    transform: translateX(43vw);
+    transition: 1.5s ease;
+  }
+  #c1value{
+    clip: rect(calc((100 - var(--cylinder-co2))/100*calc(55*var(--card-scale))),40vh,calc(55*var(--card-scale)),0);
+  }
+  #c2value{
+    clip: rect(calc((100 - var(--cylinder-water))/100*calc(55*var(--card-scale))),40vh,calc(55*var(--card-scale)),0);
+  }
+  .deleteday{
+    display: none;
+  }
+  
